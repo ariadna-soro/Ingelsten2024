@@ -251,8 +251,7 @@ cbar_ax = fig.add_axes([0.1, -0.05, 0.75, 0.03]) #XY displacement, XY extent
 cbar = fig.colorbar(bathFinal, cax=cbar_ax, orientation="horizontal", ticks=ticker.LogLocator(base=10, subs=(0.5, )), format='%.1e')
 cbar.set_label(label="Bath population")
 
-# fig.suptitle(r'Time evolution of a GA with $\Delta/J = 0$ and $g/J = %.3f$' %g) # {Delta}; and coupling points at {couplingPts[0]+1}, {couplingPts[1]+1}, {couplingPts[2]+1} and {couplingPts[3]+1}
-
-# fig.savefig('/Users/ari/Dropbox/My Mac (Ariadnas-MacBook-Pro.local)/Documents/Chalmers/PhD thesis/Projects/2023 2D Structured/1-GA-8cPts_constructive.pdf', dpi=fig.dpi, bbox_inches='tight')
-# fig.savefig('/Users/ari/Dropbox/My Mac (Ariadnas-MacBook-Pro.local)/Documents/Chalmers/PhD thesis/Projects/2023 2D Structured/1-GA-8cPts_destructive.pdf', dpi=fig.dpi, bbox_inches='tight')
-fig.savefig('/Users/ari/Dropbox/My Mac (Ariadnas-MacBook-Pro.local)/Documents/Chalmers/PhD thesis/Projects/2023 2D Structured/1-GA-8cPts_no_interference.pdf', dpi=fig.dpi, bbox_inches='tight')
+# Define path and uncomment the corresponding line to save figure:
+# fig.savefig('YourPath/1-GA-8cPts_constructive.pdf', dpi=fig.dpi, bbox_inches='tight')
+# fig.savefig('YourPath/1-GA-8cPts_destructive.pdf', dpi=fig.dpi, bbox_inches='tight')
+# fig.savefig('YourPath/1-GA-8cPts_no_interference.pdf', dpi=fig.dpi, bbox_inches='tight')
