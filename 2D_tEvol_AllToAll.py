@@ -296,9 +296,7 @@ cbar_ax = fig.add_axes([0.1, -0.05, 0.75, 0.03]) #XY displacement, XY extent
 cbar = fig.colorbar(bath1stPopTf, cax=cbar_ax, orientation="horizontal", ticks=ticker.LogLocator(base=10, subs=(0.5, )), format='%.1e')
 cbar.set_label(label="Bath population")
 
-# fig.suptitle(f'Time evolution of {nAtoms} GAs with $\Delta/J = 0$, $g/J = %.3f$' %g) # and coupling points at {(couplingPts[0]+1).tolist()}, {(couplingPts[1]+1).tolist()}')
-
 plt.show()
 
-
-fig.savefig('/Users/ari/Dropbox/My Mac (Ariadnas-MacBook-Pro.local)/Documents/Chalmers/PhD thesis/Projects/2023 2D Structured/3-GA-AllToAll.pdf', dpi=fig.dpi, bbox_inches='tight')
+# Modify path name and uncomment to save figure:
+# fig.savefig('YourPath/3-GA-AllToAll.pdf', dpi=fig.dpi, bbox_inches='tight')
