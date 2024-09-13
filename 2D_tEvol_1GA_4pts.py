@@ -193,17 +193,11 @@ print([stateEvol[tiMax,1+ipLoc] for _,ipLoc in signIpLocs])
 print('Population retained:')
 print(pAtomExcs[tiMax] + sum([(pBathExc.flatten())[ipLoc] for _,ipLoc in signIpLocs]))
 
-# fig.tight_layout()
-# fig.subplots_adjust(right=0.85, top=0.9, wspace=0.3)
-# cbar_ax = fig.add_axes([0.88, 0.15, 0.04, 0.7])
-# cbar = fig.colorbar(bathFinal, cax=cbar_ax, format='%.1e')
-
 fig.tight_layout()
 fig.subplots_adjust(right=0.85, top=0.87, wspace=0.4, hspace=0.5)
 cbar_ax = fig.add_axes([0.1, -0.05, 0.75, 0.03]) #XY displacement, XY extent
 cbar = fig.colorbar(bathFinal, cax=cbar_ax, orientation="horizontal", ticks=ticker.LogLocator(base=10, subs=(0.5, )), format='%.1e')
 cbar.set_label(label="Bath population")
 
-# fig.suptitle(f'Time evolution of a GA with $\Delta/J = 0$ and $g/J = {g}$') # {Delta}; and coupling points at {couplingPts[0]+1}, {couplingPts[1]+1}, {couplingPts[2]+1} and {couplingPts[3]+1}
-
-fig.savefig('/Users/ari/Dropbox/My Mac (Ariadnas-MacBook-Pro.local)/Documents/Chalmers/PhD thesis/Projects/2023 2D Structured/1-GA-Subradiant_Dynamics.pdf', dpi=fig.dpi, bbox_inches='tight')
+# Uncomment to save figure and define file path:
+# fig.savefig('YourPath/1-GA-Subradiant_Dynamics.pdf', dpi=fig.dpi, bbox_inches='tight')
